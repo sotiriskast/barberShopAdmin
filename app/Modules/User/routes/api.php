@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => 'api', 'middleware' => ['api']], function () {
+Route::group(['prefix' => 'api/v1', 'middleware' => ['api']], function () {
     // Public user routes
     Route::group(['prefix' => 'users'], function () {
         // These would typically be protected by auth middleware

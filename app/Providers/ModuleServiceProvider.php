@@ -15,6 +15,8 @@ class ModuleServiceProvider extends ServiceProvider
         // We'll add module service providers here as we implement them
         // Example: \App\Modules\User\Providers\UserServiceProvider::class,
         \App\Modules\User\Providers\UserServiceProvider::class,
+        \App\Modules\Barber\Providers\BarberServiceProvider::class,
+        \App\Modules\Shop\Providers\ShopServiceProvider::class,
     ];
 
     /**

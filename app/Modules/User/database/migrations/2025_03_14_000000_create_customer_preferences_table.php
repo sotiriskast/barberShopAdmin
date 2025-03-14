@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('customer_preferences', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('preferred_barber_id')->nullable();
-            $table->foreignId('preferred_service_id')->nullable();
+            $table->foreignId('preferred_barber_id')->nullable()->constrained('barbers')->onDelete('set null');
+            $table->foreignId('preferred_service_id')->nullable()->constrained('services')->onDelete('set null');
             $table->text('notes')->nullable();
             $table->date('last_haircut_date')->nullable();
             $table->string('hair_length', 50)->nullable();
